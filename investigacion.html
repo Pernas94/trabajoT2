@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+     <meta charset="utf-8">
+     <title>Mauro Pernas Web</title>
+     <link rel="stylesheet" href="styles.css">
+     <!--Link Jquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="scripts.js" type="text/javascript"></script>
+     <!--Link Fontawesome-->
+     <script src="https://kit.fontawesome.com/fe9f0abbe7.js" crossorigin="anonymous"></script>
+
+     <!--Paleta de colores: https://coolors.co/918ef4-e8f1f2-040303-6a7b76-4f359b-->
+</head>
+
+<body>
+
+     <div class="grid-container">
+          <div class="header">
+               <span class="logo-head" style="margin-left:-4%">MPW</span>
+               <p class="contador">Ha visitado <span id="contador">0</span> página<span id="plural"></span>.</p>
+               <div class="menuSandwich">
+                    <a class="botonMenuSand"><i class="fas fa-bars" style="color:white;" onclick="mostrarMenuSand()"></i></a>
+               </div>
+          </div>
+          <nav class="menu" id="menu">
+               <div class="menu-item"><a href="index.html">Actualidad</a></div>
+               <div class="menu-item-active"><a href="investigacion.html">Investigación</a></div>
+               <div class="menu-item"><a href="">Tendencias</a></div>
+               <div class="menu-item"><a href="">Blog</a></div>
+               <div class="menu-item"><a href="">Otros</a></div>
+          </nav>
+          <div class="breadcrumbs">
+               ><span id="mensaje"></span>.
+          </div>
+
+          <div class="lateral">
+               <a class="botonMenu"><i class="fas fa-bars" onclick="mostrarMenu()" style="color:white;"></i></a>
+               <div class="menu-lateral" id="menu-escondido">
+                    <ul>
+                         <li><a href="index.html">Actualidad</a></li>
+                         <li><a href="investigacion.html" style="color:#4F359B;">Investigación</a></li>
+                         <li><a href="">Tendencias</a></li>
+                         <li><a href="">Blog</a></li>
+                         <li><a href="">Otros</a></li>
+                    </ul>
+               </div>
+          </div>
+
+          <div class="contenido">
+               <article>
+                    <div>
+                         <section>
+                                   <h1 style="font-size:30px;">Problemas de ciberseguridad: Ataques DDoS</h1>
+
+                              <p>Los problemas de ciberseguridad se han convertido en fenómenos completamente comunes alrededor de todo el mundo. Cada
+                                   vez más la población se está interesando por este tipo de ataques digitales. Poco a poco se entiende que no afectan solo
+                                   a grandes empresas o corporaciones, si no que pueden tener un gran impacto, directa o indirectamente,
+                                   sobre la vida personal o profesional de cualquier persona. Existen una gran variedad de ciberataques, que dependen tanto del
+                                   método utilizado como del alcance y las características del daño. Entre ellos, tres de los más comunes son el malware, el phishing,
+                                   y los ataques DOS/DDOS. Hoy nos vamos a centrar en estos últimos, los ataques DoS/DDoS, que son ataques de denegación de servicios
+                                   (<i>Denial Of Service</i> en inglés), que consisten en hacer caer los servicios de una red a través de una especie de sobrecarga de interacciones.
+                                   Para entenderlo adecuadamente, conviene saber antes como funciona el sistema de peticiones de los sitios web.
+                              </p>
+                         </section>
+                         <br><br>
+                         <section>
+                              <h3>Peticiones web: un sistema limitado</h3>
+                              <p>
+                                   Cuando una persona intenta acceder a una página o servicio web desde su dispositivo,
+                                   este dispositivo envia una petición a un servidor que lo recibe y le devuelve, si es posible, aquello que se pide. Es decir,
+                                   que cuando usted accede a su página de Facebook, su ordenador envía una petición a los servidores de la compañía; si no hay problemas
+                                   y la respuesta es afirmativa, le permite acceder a su perfil, pero si algo falla por el camino (por ejemplo,
+                                   por culpa de una sobrecarga de peticiones) usted no podría meterse a su cuenta y mirar las fotos de sus amigos.
+                                   Así, los servicios web tienen un límite de peticiones a sus servidores, que dependerá de las necesidades de dicha web
+                                   y de las capacidades de su red.
+                                   <div class="imgContainer">
+                                        <iframe class="video-container" src="https://www.youtube.com/embed/JpmT3DH6yuY" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p>Vídeo explicativo sobre el funcionamiento del modelo cliente-servidor</p>
+                                   </div>
+                              
+                              Dicho límite se establece en un principio dependiendo del tráfico que se espera de acuerdo a
+                              las previsiones, pero se puede modificar una vez el servicio entre en funcionamiento. Cuando el servicio está en marcha, se
+                              modifica dependiendo de la necesidad: si el tráfico real es mayor que el esperado, se amplia su potencia de recepción para que los
+                              servidores no se saturen y el servicio no empeore.
+                              El problema viene cuando ese límite se ve sobrepasado y el servidor se realentiza y comienza a dar problemas a la hora tanto de
+                              operar como de acceder a él, llegando incluso a "caerse" y no ser capaz de cumplir su función. Esto se puede producir motivos naturales,
+                              como que por factores externos incontrolables una web reciba una gran cantidad de tráfico real. Pero también se puede producir a través
+                              de ciberataques, como el DOS/DDOS.
+                              </p>
+                         </section>
+                         <br><br>
+                         <section>
+                              <h3>¿En qué consiste el ataque DOS?</h3>
+                              <p>
+                                   Los ataques DOS son un tipo de ciberataque que consiste en sobrecargar a propósito un servicio web, normalmente con motivos malignos.
+                                   El ataque consiste en un envío simultáneo y masivo de peticiones a un servidor, que resultará en una saturación del servidor y una
+                                   posible caída temporal del sistema. Se puede hacer a través de un solo ordenador (es decir, con un solo IP), en cuyo caso se denomina
+                                   ataque DoS, o a través de múltiples dispositivos e IP's, en cuyo caso se denomina ataque DDoS (<i>Distributed Denial of Service</i>).
+                                   El resultado y objetivo de ambos es el mismo, pero el potencial destructivo del ataque DDoS es mucho mayor, además de ser más difícil de bloquear.
+                                   No solo permite realizar un número enorme de peticiones (en el <a href="https://github.blog/2018-03-01-ddos-incident-report/" target="_blank">mayor ataque DDoS de la historia</a>
+                                   se contaron un total de 126.9 millones de ellas), si no que al provenir de diferentes IP's se hace casi imposible diferenciar
+                                   las peticiones reales de las del ataque, imposibilitando su bloqueo. Así, este tipo de ataques digitales son muy difíciles de
+                                   controlar, a menos que se tenga el equipo y la preparación adecuada para ellos. Incluso algunas de las empresas tecnológicas más importantes
+                                   del mundo, como Twitter, Spotify, Amazon o Ebay, han sido víctimas de este método.
+                              </p>
+                              <div class="imgContainer">
+                                   <img src="Images\DDoS.jpg" class="imagenDDoS" alt="Infografía de ataque DDoS">
+                                   <p>Representación gráfica de un ataque DDoS, donde el atacante utiliza una botnet para saturar un servidor</p>
+                              </div>
+                              <p>
+                                   El ataque DDoS se realiza a través de una red de ordenadores infectados por algún tipo de malware, denominados <i>botnet</i> o <i>red zombie</i>.
+                                   Normalmente los usuarios de los ordenadores infectados ni siquiera saben que su equipo está realizando dichas peticiones, por lo que participan
+                                   en el ataque sin ser conscientes de ello. A través de este tipo de redes zombie, el atacante o atacantes consiguen un número de peticiones infinitamente
+                                   mayor que con un ataque DoS, además de ser prácticamente imparable.
+                              </p>
+                         </section>
+                         <br><br>
+                         <section>
+                              <h3>¿Para qué se utilizan?</h3>
+                              <p>
+                                   Por los casos conocidos hasta le fecha, los ataques DoS/DDoS suelen tener dos tipos de objetivos bastante diferenciados: en primer lugar, se
+                                   utilizan como un ataque para dañar la imagen de una empresa, y consiguientemente la confianza de sus usuarios en ella. Es el caso de la
+                                   <a href="https://www.pandasecurity.com/es/mediacenter/noticias/la-operacion-payback-causo-37-dias-de-inactividad/" target="_blank">Operacion Payback</a>,
+                                   donde miembros de foros online saturaron los servicios de asociaciones anti-piratería. En ocasiones también se han utilizado junto a métodos de extorsión,
+                                   lanzando primero un ataque a pequeña escala para luego exigir una recompensa económica, con la amenaza de un ataque real.
+
+                                   En segundo lugar, están los ataques <a href="https://www.cyberdefensemagazine.com/ddos-as-a-distraction/" target="_blank">DDoS utilizados como
+                                        distracción</a>. Con ellos se pretende que una empresa concentre todos sus recursos informáticos en intentar detener el ataque, mientras el atacante
+                                   intenta encontrar brechas de seguridad para realizar otro tipo de ciberataques o infecciones.
+                              </p>
+                              <p>En ambos casos, hay que tener cuidado con este tipo de ataques. Ya sea para dañar la imagen de una empresa o para infectarla con algún tipo de
+                                   malware, conviene siempre estar debidamente preparado para estos casos, y solo puede hacerse prestando atención a la ciberseguridad.</p>
+
+                         </section><br><br>
+                         <h3>Fuentes:</h3>
+                         <ul>
+                              <li><a href="https://elpais.com/tecnologia/2018/03/05/actualidad/1520249257_684529.html" target="_blank">Así se ha producido el mayor ataque DDoS de la historia</a></li>
+                              <li><a href="https://us.norton.com/internetsecurity-emerging-threats-what-is-a-ddos-attack-30sectech-by-norton.html#:~:text=What%20are%20distributed%20denial%2Dof,the%20website%20or%20service%20inoperable."
+                                        target="_blank">What is a distributed denial of service attack (DDoS) and what can you do about them?</a></li>
+                              <li><a href="https://www.incibe.es/protege-tu-empresa/blog/medidas-prevencion-ataques-denegacion-servicio" target="_blank">Medidas de prevención contra ataques de denegación de servicio</a></li>
+                              <li><a href="https://www.osi.es/es/actualidad/blog/2018/08/21/que-son-los-ataques-dos-y-ddos" target="_blank">¿Qué son los ataques DoS y DDoS?</a></li>
+                              <li><a href="https://elpais.com/tecnologia/2016/10/21/actualidad/1477073994_072618.html" target="_blank">Así han atacado los ‘hackers’ las webs de Twitter, Spotify o Ebay</a></li>
+                         </ul>
+
+                    </div>
+               </article>
+          </div>
+
+          <footer class="footer">
+               <a href="https://twitter.com/pittofficial?lang=es" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+               <p>@PittOfficial</p>
+               <a href="https://www.linkedin.com/in/brad-pitt-9b895593" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+               <p>Brad Pitt (Actor)</p>
+               <a href="" target="_blank" alt="TheRealPitt@hotmail.com"><i class="fas fa-envelope fa-2x" style="color:white"></i></a>
+               <p>iwilladoptyou@gmail.com</p>
+               <a href="tel:618121422" style="color:white"><i class="fab fa-whatsapp-square fa-2x"></i></a>
+          </footer>
+
+     </div>
+     <script>
+          if (sessionStorage.clickcount) {
+               sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+               document.getElementById("plural").innterHTML = ("s");
+          } else {
+               sessionStorage.clickcount = 1;
+          }
+          document.getElementById("contador").innerHTML = sessionStorage.clickcount;
+
+
+
+          $("#mensaje").text("Estás en Investigación");
+     </script>
+</body>
+
+</html>
